@@ -326,9 +326,11 @@ h3 {
   border-radius: 2px;
   padding: 2px;
   padding-left: 4px;
+  margin:2px;
   padding-right: 4px;
   color: #bbb;
 }
 .cv {
   cursor: pointer;
 }
+
