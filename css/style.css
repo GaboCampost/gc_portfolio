@@ -68,6 +68,14 @@ hr {
 .right-items a:hover {
   text-decoration: underline;
 }
+.right-items-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right-items-mobile a{
+  padding: 5px;
+}
 .title {
   padding-top: 2.5rem;
 }
@@ -152,8 +160,17 @@ h3 {
   .options {
     max-width: 100%;
   }
+  .right-items-mobile{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
 }
 @media (max-width: 768px) {
+  .right-items{
+    display: none;
+  }
   .sidepanel {
     display: none;
   }
@@ -326,7 +343,7 @@ h3 {
   border-radius: 2px;
   padding: 2px;
   padding-left: 4px;
-  margin:2px;
+  margin: 2px;
   padding-right: 4px;
   color: #bbb;
 }
@@ -334,3 +351,72 @@ h3 {
   cursor: pointer;
 }
 
+.cert-cont {
+  padding: 5px;
+  width: 100%;
+  min-height: 150px;
+}
+
+.cert-items-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.cert-item {
+  min-width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.cert-item.active {
+  display: block;
+}
+
+.cert-wrp {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.cert-btns{
+  height: fit-content;
+}
+
+
+.cert-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.cert-btn.prev {
+  left: 10px;
+}
+
+.cert-btn.next {
+  right: 10px;
+}
+
+.ruler{
+  width: 30px;
+  height: 3px;
+  background-color: #bbb;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+}
+
+.cert-desc{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #bbb;
+}
